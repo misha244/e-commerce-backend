@@ -13,8 +13,7 @@ CREATE TABLE product (
     stock VARCHAR(30) NOT NULL DEFAULT 10,
     category_id INT,
     PRIMARY KEY (id),
-    CONSTRAINT fk_category FOREIGN KEY (category_id) 
-      REFERENCES category (id) ON DELETE CASCADE  
+    FOREIGN KEY (category_id) REFERENCES category (id)
     
 );
 
@@ -24,14 +23,12 @@ CREATE TABLE tag (
     PRIMARY KEY (id)
 );
 
-CREATE TABLE productTag (
+CREATE TABLE product_tag (
 	id INT NOT NULL AUTO_INCREMENT,
     product_id INT,
     tag_id INT,
     PRIMARY KEY (id),
-    CONSTRAINT fk_product FOREIGN KEY (product_id) 
-      REFERENCES product (id) ON DELETE CASCADE,
-      CONSTRAINT fk_tag FOREIGN KEY (tag_id) 
-    REFERENCES tag (id) ON DELETE CASCADE  
+    FOREIGN KEY (product_id) REFERENCES product (id),
+	FOREIGN KEY (tag_id) REFERENCES tag (id)
      
 );
