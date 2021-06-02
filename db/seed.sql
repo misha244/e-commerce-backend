@@ -13,7 +13,9 @@ CREATE TABLE product (
     stock VARCHAR(30) NOT NULL DEFAULT 10,
     category_id INT,
     PRIMARY KEY (id),
-    FOREIGN KEY (category_id) REFERENCES category (id) 
+    CONSTRAINT fk_category FOREIGN KEY (category_id) 
+      REFERENCES category (id) ON DELETE CASCADE  
+    
 );
 
 CREATE TABLE tag (
@@ -27,6 +29,9 @@ CREATE TABLE productTag (
     product_id INT,
     tag_id INT,
     PRIMARY KEY (id),
-    FOREIGN KEY (product_id) REFERENCES product (id),
-    FOREIGN KEY (tag_id) REFERENCES tag (id)
+    CONSTRAINT fk_product FOREIGN KEY (product_id) 
+      REFERENCES product (id) ON DELETE CASCADE,
+      CONSTRAINT fk_tag FOREIGN KEY (tag_id) 
+    REFERENCES tag (id) ON DELETE CASCADE  
+     
 );
