@@ -19,8 +19,8 @@ For this project I built the back end for an e-commerce site by modifying starte
 ## Getting Started
 
 ```
-git clone <git@github.com:misha244/e-commerce-backend .git>
-cd <e-commerce-backend >
+git clone <git@github.com:misha244/e-commerce-backend.git>
+cd <e-commerce-backend>
 npm install
 npm run start
 ```
