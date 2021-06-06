@@ -32,9 +32,9 @@ router.get("/:id", (req, res) => {
     },
   })
     .then((categoryData) => res.json(categoryData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+    .catch((error) => {
+      console.log(error);
+      res.status(500).json(error);
     });
 });
 

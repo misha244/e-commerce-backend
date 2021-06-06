@@ -12,9 +12,9 @@ router.get("/", (req, res) => {
     },
   })
     .then((tagData) => res.json(tagData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+    .catch((error) => {
+      console.log(error);
+      res.status(500).json(error);
     });
 });
 
@@ -30,9 +30,9 @@ router.get("/:id", (req, res) => {
     },
   })
     .then((tagData) => res.json(tagData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+    .catch((error) => {
+      console.log(error);
+      res.status(500).json(error);
     });
 });
 
@@ -42,9 +42,9 @@ router.post("/", (req, res) => {
     tag_name: req.body.tag_name,
   })
     .then((tagData) => res.json(tagData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+    .catch((error) => {
+      console.log(error);
+      res.status(500).json(error);
     });
 });
 
@@ -67,9 +67,9 @@ router.put("/:id", (req, res) => {
       }
       res.json(tagData);
     })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+    .catch((error) => {
+      console.log(error);
+      res.status(500).json(error);
     });
 });
 
@@ -87,9 +87,9 @@ router.delete("/:id", (req, res) => {
       }
       res.json(tagData);
     })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+    .catch((error) => {
+      console.log(error);
+      res.status(500).json(error);
     });
 });
 
