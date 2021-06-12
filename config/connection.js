@@ -8,6 +8,7 @@ const dbOptions = {
 const dbName = process.env.DB_NAME;
 const dbUser = process.env.DB_USER;
 const dbPassword = process.env.DB_PASSWORD;
+
 let connection;
 if (process.env.JAWSDB_URL) {
   connection = new sequelize(process.env.JAWSDB_URL);
